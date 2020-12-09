@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2020-12-09T02:27:48.031Z" agent="5.0 (X11; CrOS x86_64 13421.99.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="ANxN5PTHApK-TLAiYxKZ" version="13.10.0" type="github">
+  <diagram id="b_y98X2VIRN5HUhXWhgg" name="Page-1">
+    <mxGraphModel dx="1635" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-51" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="48" y="730" width="342" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="10" width="770" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-4" value="Create New Collection" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-5" value="Collection 1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-6" value="Collection 2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-7" value="Collection 3" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-8" value="Current Card" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="350" width="270" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-9" value="Next Card" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="450" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-10" value="Prev Card" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="455" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-11" value="hover to flip" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="310" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-12" value="1/20" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="630" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-13" value="Edit/create new cards" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="350" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="453" y="749.5" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-15" value="Add/Edit Card" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="568" y="769.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="643" y="859.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="498" y="859.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-27" value="front" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="518" y="819.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-28" value="back" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="663" y="819.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-29" value="Close" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="573" y="959.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-31" value="enter collection name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="168" y="760" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VE5HtoDK0rg8s1XQBbFN-14" target="VE5HtoDK0rg8s1XQBbFN-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-38" value="Edit Card" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="560" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-49" value="Submit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="573" y="919.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-52" value="Submit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="75.5" y="810" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-53" value="Add Cards" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240.5" y="810" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VE5HtoDK0rg8s1XQBbFN-54" value="Hero Bar" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="48" y="70" width="752" height="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
