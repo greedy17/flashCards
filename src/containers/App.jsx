@@ -6,19 +6,21 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cardNumber: 0,
-      collection: []
+      collectionNumber: 0,
+      collections: []
     }
 
   }
 
   componentDidMount() {
-    axios.get('put collection endpoint here')
+    axios.get('http://localhost:5000/api/collections')
     .then(res => {
-      const collection = res.data;
-      this.setState({collection: collection})
+      const collections = res.data;
+      this.setState({collections})
     })
   }
+
+
 
   render(){
     return(
