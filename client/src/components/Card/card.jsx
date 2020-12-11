@@ -2,7 +2,13 @@ import React from 'react';
 
 function Card(props){
     return(
-        <div>Card</div>
+        <div className="card">
+            {console.log(props)}
+            <div className="card--word">{props.card.word}</div>
+            <div className="card--word">{props.card.definition}</div>
+            
+        </div>
+        
     );
 }
 
