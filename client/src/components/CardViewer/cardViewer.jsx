@@ -3,7 +3,10 @@ import Card from "../Card/card"
 
 function CardViewer(props){
     return(
-        <Card card={props.card} />
+        <div>
+            <Card collection={props.collection} card={props.cards[0]}/>
+        </div>
+        
     );
 }
 
