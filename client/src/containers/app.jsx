@@ -20,11 +20,12 @@ class App extends Component {
   componentDidMount() {
     axios.get('http://localhost:5000/api/collections')
     .then(res => {
-      const collections = res.data[this.state.collectionNumber];
+      const collections = res.data;
       const cards = res.data[this.state.collectionNumber].cards;
       this.setState({collections});
       this.setState({cards});
       this.setState({ loading: false })
+      console.log(collections);
     })
   }
 
@@ -64,7 +65,7 @@ class App extends Component {
       return(
         <div className="container-fluid app">
           <LandingPage/>
-          <CardViewer card={this.state.cards[this.state.cardNumber]} nextCard={() => this.goToNextCard()} previousCard={() => this.goToPreviousCard()} />
+          <CardViewer collections={this.state.collections} card={this.state.cards[this.state.cardNumber]} nextCard={() => this.goToNextCard()} previousCard={() => this.goToPreviousCard()} />
         </div>
       )
     }

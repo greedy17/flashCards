@@ -1,4 +1,4 @@
-.prev, .next, .def, .row {
+.prev, .next, .def, .row, .main {
   display: flex;
   justify-content: center;
   align-items: center;

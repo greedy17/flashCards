@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  padding-right: 10;
+}
+
+.row {
+  padding-top: 10em;
+}
+.add-card {
+  padding: 1em;
+}
+
+.collections {
+  height: 25vw;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
