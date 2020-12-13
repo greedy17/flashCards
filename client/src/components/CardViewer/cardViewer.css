@@ -5,6 +5,11 @@
   padding: 1em;
 }
 
+.def {
+  display: flex;
+  flex-direction: column;
+}
+
 .row {
   height: 100vh;
 }

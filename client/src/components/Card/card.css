@@ -10,6 +10,8 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(darkblue, black);
+  color: white;
 }
 
 .card:hover {

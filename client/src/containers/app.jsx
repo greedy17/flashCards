@@ -65,7 +65,13 @@ class App extends Component {
       return(
         <div className="container-fluid app">
           <LandingPage/>
-          <CardViewer collections={this.state.collections} card={this.state.cards[this.state.cardNumber]} nextCard={() => this.goToNextCard()} previousCard={() => this.goToPreviousCard()} />
+          <CardViewer 
+          cardNum = {this.state.cardNumber}
+          cards={this.state.cards}
+          collections={this.state.collections} 
+          card={this.state.cards[this.state.cardNumber]} 
+          nextCard={() => this.goToNextCard()} 
+          previousCard={() => this.goToPreviousCard()}/>
         </div>
       )
     }
