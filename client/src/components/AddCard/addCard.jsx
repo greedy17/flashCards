@@ -4,7 +4,7 @@ import './addCard.css'
 const addCArd = () => {
   return(
     <div className="add-card">
-      <button className="btn-warning">Add Card</button>
+      <button className="btn btn-outline-info">Add Card</button>
     </div>
   )
 }

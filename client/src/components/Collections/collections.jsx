@@ -1,6 +1,5 @@
 import React from 'react';
 import CollectionTile from '../CollectionTile/collectionTile';
-import './collections.css';
 
 const collections = (props) => {
   return(

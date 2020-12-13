@@ -12,14 +12,14 @@ const CardViewer = (props) => {
           </div>
           <div className="main">
             <div className='prev'>
-                <button className="btn-warning" onClick={() => props.previousCard()}>Prev</button>
+                <button className="btn-warning btn-lg" onClick={() => props.previousCard()}>Prev</button>
             </div>
             <div className='def'>
                 <Card card={props.card}/>
                 <CardCounter cardNum={props.cardNum} cards={props.cards} />
             </div>
             <div className='next'>
-                <button className="btn-warning" onClick={() => props.nextCard()}>Next</button>
+                <button className="btn-warning btn-lg" onClick={() => props.nextCard()}>Next</button>
             </div>
           </div>
         </div>

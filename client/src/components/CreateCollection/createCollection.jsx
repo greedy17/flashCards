@@ -3,8 +3,8 @@ import './createCollection.css';
 
 const createCollection = () => {
   return(
-    <div className="create-collection">
-      <button className="btn-warning">Create Collection</button>
+    <div>
+      <button className="btn btn-outline-info">Create Collection</button>
     </div>
   )
 }

@@ -4,10 +4,12 @@
   width: 15vw;
   margin: 1rem;
   border-radius: .2rem;
-  box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 0px 5px grey;
   font-family: 'Vollkorn SC', serif;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(darkblue, lightblue);
+  color: white;
 }
