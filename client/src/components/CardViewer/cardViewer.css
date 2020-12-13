@@ -1,0 +1,10 @@
+.prev, .next, .def, .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.row {
+  height: 100vh;
+}

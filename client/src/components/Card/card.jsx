@@ -1,15 +1,13 @@
 import React from 'react';
+import './card.css';
 
-function Card(props){
+const Card = (props) => {
     return(
-        <div className="card">
-            {console.log(props)}
-            <div className="card--word">{props.card.word}</div>
-            <div className="card--word">{props.card.definition}</div>
-            
-        </div>
-        
-    );
+    <div className="card">
+        <h1 className="">{props.card.word}</h1>
+        <h3 className="">{props.card.definition}</h3>   
+    </div>
+ );
 }
 
 export default Card;
