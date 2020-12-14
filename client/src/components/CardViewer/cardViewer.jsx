@@ -15,6 +15,7 @@ const CardViewer = (props) => {
                 <button className="btn-info btn-lg" onClick={() => props.previousCard()}>Prev</button>
             </div>
             <div className='cardAndcount'>
+                <h4>Click the card to reveal definition!</h4>
                 <Card card={props.card}/>
                 <CardCounter cardNum={props.cardNum} cards={props.cards} />
             </div>

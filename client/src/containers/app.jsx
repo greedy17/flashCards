@@ -5,8 +5,8 @@ import LandingPage from '../components/LandingPage/landingPage';
 import './app.css'
 
 class App extends Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
 
     this.state = {
       collections: [],
@@ -15,7 +15,7 @@ class App extends Component {
       cardNumber: 0,
       loading: true,
     }
-  }
+  };
 
   componentDidMount() {
     axios.get('http://localhost:5000/api/collections')
