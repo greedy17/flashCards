@@ -8,7 +8,7 @@ const CardViewer = (props) => {
     return(
         <div className='row'>
           <div className='bar'>
-              <SideBar collections={props.collections} collectionNum={props.collectionNum}/>
+              <SideBar collections={props.collections}/>
           </div>
           <div className="main">
             <div className='prev'>

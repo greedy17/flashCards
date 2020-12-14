@@ -35,10 +35,6 @@ class App extends Component {
     })
   }
 
-  changeCollection(num){
-    this.setState({collectionNumber: num})
-  }
-
    goToNextCard(){
      let tempCardNumber = this.state.cardNumber;
      tempCardNumber++;
@@ -69,7 +65,6 @@ class App extends Component {
         <div className="container-fluid app">
           <LandingPage/>
           <CardViewer 
-          collectionNum={() => this.changeCollection()}
           cardNum = {this.state.cardNumber}
           cards={this.state.cards}
           collections={this.state.collections} 
