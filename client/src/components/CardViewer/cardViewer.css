@@ -1,11 +1,11 @@
-.prev, .next, .def, .row, .main {
+.prev, .next, .cardAndcount, .row, .main {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1em;
 }
 
-.def {
+.cardAndcount {
   display: flex;
   flex-direction: column;
   color: darkblue;
@@ -16,12 +16,17 @@
 }
 
 .bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   left: -5%;
+  padding: 2em;
+  box-shadow:2px -5px 10px lightsteelblue;
 }
 
 .main {
   position: relative;
   left: -6%;
-  top: 5%;
 }

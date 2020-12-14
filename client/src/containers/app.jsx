@@ -25,7 +25,6 @@ class App extends Component {
       this.setState({collections});
       this.setState({cards});
       this.setState({ loading: false })
-      console.log(collections);
     })
   }
 
@@ -34,6 +33,10 @@ class App extends Component {
     this.setState({
       cardNumber: this.state.cards.length -1
     })
+  }
+
+  changeCollection(num){
+    this.setState({collectionNumber: num})
   }
 
    goToNextCard(){
@@ -66,6 +69,7 @@ class App extends Component {
         <div className="container-fluid app">
           <LandingPage/>
           <CardViewer 
+          collectionNum={() => this.changeCollection()}
           cardNum = {this.state.cardNumber}
           cards={this.state.cards}
           collections={this.state.collections} 

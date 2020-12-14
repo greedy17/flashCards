@@ -21,3 +21,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.categories {
+  padding-bottom: 2em;
+  color: darkblue;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+}

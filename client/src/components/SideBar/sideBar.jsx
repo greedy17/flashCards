@@ -7,8 +7,11 @@ import './sideBar.css';
 const sideBar = (props) => {
   return(
     <div className='row'>
+      <div className='categories'>
+        <h1 className="title" >Categories</h1>
+      </div>
       <div className='collections'>
-        <Collections collections={props.collections}/>
+        <Collections collections={props.collections} collectionNum={props.collectionNum}/>
       </div>
       <div className='add-card'>
         <AddCard/>

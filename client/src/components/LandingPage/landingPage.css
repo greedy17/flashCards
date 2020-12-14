@@ -25,7 +25,7 @@
 }
 
 .arrow {
-  border: solid gold;
+  border: solid lightblue;
   border-width: 0 7px 7px 0;
   display: inline-block;
   padding: 3px;
@@ -33,8 +33,8 @@
 }
 
 .arrow:hover {
-  transform: scale(1.2);
-  box-shadow: 0px -3px 40px darkblue;
+  transform: scale(1.5);
+  box-shadow: 5px 10px 40px darkblue;
 }
 
 .down {

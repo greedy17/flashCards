@@ -3,8 +3,8 @@ import './collectionTile.css';
 
 const collectionTile = ({title}) => {
   return(
-    <div className='tile'>
-      <h1>{title}</h1>
+    <div>
+      <h1 className='tile'>{title}</h1>
     </div>
   )
 }
