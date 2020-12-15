@@ -9,6 +9,7 @@ class App extends Component {
     this.state = {
       collectionNumber: 0,
       collections: [],
+      cardNumber: 0,
       loading: true
     }
   }
@@ -22,27 +23,27 @@ class App extends Component {
     })
   }
 
-  // goToNextCard(){
-  //   let tempCardNumber = this.state.cardNumber;
-  //   tempCardNumber++;
-  //   if(tempCardNumber === this.cards.length){
-  //     tempCardNumber = 0;
-  //   }
-  //   this.setState({
-  //     cardNumber: tempCardNumber
-  //   });
-  // }
+  goToNextCard(){
+    let tempCardNumber = this.state.cardNumber;
+    tempCardNumber++;
+    if(tempCardNumber === this.collections[this.state.collectionNumber].cards.length){
+      tempCardNumber = 0;
+    }
+    this.setState({
+      cardNumber: tempCardNumber
+    });
+  }
 
-  // goToPreviousCard(){
-  //   let tempCardNumber = this.state.cardNumber;
-  //   tempCardNumber--;
-  //   if(tempCardNumber < 0){
-  //     tempCardNumber = this.cards.length - 1;
-  //   }
-  //   this.setState({
-  //     cardNumber: tempCardNumber
-  //   });
-  // }
+  goToPreviousCard(){
+    let tempCardNumber = this.state.cardNumber;
+    tempCardNumber--;
+    if(tempCardNumber < 0){
+      tempCardNumber = this.cards.length - 1;
+    }
+    this.setState({
+      cardNumber: tempCardNumber
+    });
+  }
 
   render(){
     if(this.state.loading === true){
@@ -52,8 +53,12 @@ class App extends Component {
         <div>
           <CardViewer 
           collection={this.state.collections[0]} 
-          cards={this.state.collections[0].cards} />
-          {/* nextCard={() => this.goToNextCard()} previousCard={() => this.goToPreviousCard()} */}
+          cards={this.state.collections[0].cards} 
+          currentCard={this.state.collections[0].cards[this.state.cardNumber]}
+          nextCard={() => this.goToNextCard()} 
+          previousCard={() => this.goToPreviousCard()} 
+          />
+          
         </div>
       )
     }
