@@ -20,7 +20,7 @@ const sideBar = (props) => {
         <CreateCollection/>
       </div>
     </div>
-  )
+  );
 }
 
 export default sideBar;
