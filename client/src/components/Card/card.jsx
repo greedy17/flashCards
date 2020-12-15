@@ -1,18 +1,6 @@
 import React, {Component} from 'react';
 import './card.css';
 
-<<<<<<< HEAD
-function Card(props){
-    return(
-        <div className="card">
-            {console.log(props.card)}
-            <div className="card--word">{props.card.word}</div>
-            <div className="card--word">{props.card.definition}</div>
-            
-        </div>
-        
-    );
-=======
 class Card extends Component {
     constructor(props){
         super(props);
@@ -32,7 +20,6 @@ class Card extends Component {
             </div>
          );
     }
->>>>>>> a2d39e998ba5776ce789575baa9f50a05e79f04e
 }
 
 export default Card;
