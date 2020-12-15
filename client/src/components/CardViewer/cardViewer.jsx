@@ -1,23 +1,30 @@
 import React from 'react';
-import Card from "../Card/card"
+import Card from "../Card/card";
+import './cardViewer.css';
+import SideBar from '../SideBar/sideBar';
+import CardCounter from '../CardCounter/cardCounter';
 
-function CardViewer(props){
+const CardViewer = (props) => {
     return(
-        <div className="row row-spacer">
-            <div className="col-md-4">
-                <button onClick={() => props.previousCard()}>Previous Card</button>
+        <div className='row'>
+          <div className='bar'>
+              <SideBar collections={props.collections}/>
+          </div>
+          <div className="main">
+            <div className='prev'>
+                <button className="btn-info btn-lg" onClick={() => props.previousCard()}>Prev</button>
             </div>
-            <div className="col-md-4">
-            <Card collection={props.collection} card={props.currentCard} 
-            />
+            <div className='cardAndcount'>
+                <h4>Click the card to reveal definition!</h4>
+                <Card card={props.card}/>
+                <CardCounter cardNum={props.cardNum} cards={props.cards} />
             </div>
-            
-            <div className="col-md-4">
-                <button onClick={() => props.nextCard()}>Next Card</button>
+            <div className='next'>
+                <button className="btn-info btn-lg" onClick={() => props.nextCard()}>Next</button>
             </div>
+          </div>
         </div>
-        
-    );
+    )    
 }
 
 export default CardViewer;

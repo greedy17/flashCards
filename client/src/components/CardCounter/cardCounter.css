@@ -1,0 +1,11 @@
+.counter {
+  border: 1px solid lightblue;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px grey;
+  font-family: 'Vollkorn SC', serif;
+  width:5vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
