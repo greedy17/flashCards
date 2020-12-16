@@ -76,7 +76,8 @@ class App extends Component {
       tempCollectionNumber = 0;
     }
     this.setState({
-      collectionNumber: tempCollectionNumber
+      collectionNumber: tempCollectionNumber,
+      cardNumber: 0
    })
    console.log(this.state.collectionNumber);
  }
@@ -88,7 +89,8 @@ class App extends Component {
         tempCollectionNumber = this.state.collections.length - 1;
       }
       this.setState({
-        collectionNumber: tempCollectionNumber
+        collectionNumber: tempCollectionNumber,
+        cardNumber: 0
     });
     }
 
