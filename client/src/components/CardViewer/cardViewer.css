@@ -12,7 +12,7 @@
 }
 
 .row {
-  height: 100vh;
+  height: 95vh;
 }
 
 .bar {
@@ -22,11 +22,22 @@
   align-items: center;
   position: relative;
   left: -5%;
-  padding: 2em;
+  top: 5%;
+  padding: 1em;
   box-shadow:2px -5px 10px lightsteelblue;
 }
 
 .main {
   position: relative;
   left: -6%;
+  top: 3.5%;
+}
+
+.btn-info {
+  transition: all .1s;
+  background-color: darkblue !important
+}
+
+.btn-info:hover {
+  transform: scale(1.05);
 }

@@ -5,13 +5,12 @@ import LandingPage from '../components/LandingPage/landingPage';
 import './app.css'
 
 class App extends Component {
-  constructor(){
-    super();
-
+  constructor(props){
+    super(props);
+    
     this.state = {
       collections: [],
       collectionNumber: 0,
-      cards: [],
       cardNumber: 0,
       loading: true,
     }
@@ -21,10 +20,10 @@ class App extends Component {
     axios.get('http://localhost:5000/api/collections')
     .then(res => {
       const collections = res.data;
-      const cards = res.data[this.state.collectionNumber].cards;
-      this.setState({collections});
-      this.setState({cards});
-      this.setState({ loading: false })
+      this.setState({
+        collections,
+        loading: false
+      });
     })
   }
 
@@ -38,7 +37,7 @@ class App extends Component {
    goToNextCard(){
      let tempCardNumber = this.state.cardNumber;
      tempCardNumber++;
-     if(tempCardNumber === this.state.cards.length){
+     if(tempCardNumber === this.state.collections[this.state.collectionNumber].cards.length){
        tempCardNumber = 0;
      }
      this.setState({
@@ -50,12 +49,44 @@ class App extends Component {
      let tempCardNumber = this.state.cardNumber;
      tempCardNumber--;
      if(tempCardNumber < 0){
-       tempCardNumber = this.state.cards.length - 1;
+       tempCardNumber = this.state.collections[this.state.collectionNumber].cards.length - 1;
      }
      this.setState({
        cardNumber: tempCardNumber
     });
    }
+
+   goToNextCollection(){
+    let tempCollectionNumber = this.state.collectionNumber;
+    tempCollectionNumber++;
+    if(tempCollectionNumber === this.state.collections.length){
+      tempCollectionNumber = 0;
+    }
+    this.setState({
+      collectionNumber: tempCollectionNumber
+   })
+   console.log(this.state.collectionNumber);
+ }
+
+    goToPreviousCollection(){
+      let tempCollectionNumber = this.state.collectionNumber;
+      tempCollectionNumber--;
+      if(tempCollectionNumber < 0){
+        tempCollectionNumber = this.state.collections.length - 1;
+      }
+      this.setState({
+        collectionNumber: tempCollectionNumber
+    });
+    }
+
+
+   Scroll() {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0, 
+      behavior: 'smooth',
+    });
+  }
 
   render(){
     if(this.state.loading === true){
@@ -63,14 +94,17 @@ class App extends Component {
     }else{
       return(
         <div className="container-fluid app">
-          <LandingPage/>
-          <CardViewer 
+          <LandingPage scroll={()=>this.Scroll()}/>
+          <CardViewer
+          collectionNumber={this.state.collectionNumber}
+          collections={this.state.collections}
           cardNum = {this.state.cardNumber}
-          cards={this.state.cards}
-          collections={this.state.collections} 
-          card={this.state.cards[this.state.cardNumber]} 
+          cards={this.state.collections[this.state.collectionNumber].cards}
           nextCard={() => this.goToNextCard()} 
-          previousCard={() => this.goToPreviousCard()}/>
+          previousCard={() => this.goToPreviousCard()}
+          prevCollection={() => this.goToPreviousCollection()}
+          nextCollection={() => this.goToNextCollection()}
+          />
         </div>
       )
     }
