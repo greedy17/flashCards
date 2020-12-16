@@ -17,9 +17,9 @@ const sideBar = (props) => {
         <AddCard 
           collections={props.collections}
           currentCollection = {props.currentCollection}
-          cardWord ={props.cardWord}
-          cardDefinition = {props.cardDefinition}
-          pushCard = {() => props.pushCard()}
+          // cardWord ={props.cardWord}
+          // cardDefinition = {props.cardDefinition}
+          // pushCard = {() => props.pushCard()}
           />
       </div>
       <div>

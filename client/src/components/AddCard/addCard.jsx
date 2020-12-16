@@ -1,5 +1,6 @@
 import React from 'react';
 import './addCard.css'
+import axios from 'axios';
 
   class addCard extends React.Component{
     constructor(props){
@@ -24,8 +25,25 @@ import './addCard.css'
     handleSubmit(event){
       event.preventDefault();
       console.log(this.state.cardWord, this.state.cardDefinition);
-      this.props.pushCard(this.state.cardWord, this.state.cardDefinition);
-      
+      this.pushCard(this.state.cardWord, this.state.cardDefinition);
+    }
+
+    pushCard(cardWord, cardDefinition){
+      console.log(cardWord)
+      console.log(cardDefinition)
+      console.log(this.props.currentCollection)
+      let collectionId = this.props.collections[this.props.currentCollection]._id;
+      console.log(collectionId);
+      const cardsUrl = 'http://localhost:5000/api/collections/' + collectionId + '/cards';
+      console.log(cardsUrl);
+      axios({
+        method: 'post',
+        url: cardsUrl,
+        data: {
+          word: cardWord,
+          definition: cardDefinition
+        }
+      })
     }
     
   

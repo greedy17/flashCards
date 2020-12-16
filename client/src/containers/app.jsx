@@ -33,21 +33,21 @@ class App extends Component {
     })
   }
 
-  pushCard(cardWord, cardDefinition){
-    console.log(cardWord)
-    console.log(cardDefinition)
-    let collectionId = this.state.collections[this.state.collectionNumber]._id;
-    console.log(collectionId);
-    const cardsUrl = 'http://localhost:5000/api/collections/' + collectionId + '/cards';
-    // axios({
-    //   method: 'post',
-    //   url: cardsUrl,
-    //   data: {
-    //     word: cardWord,
-    //     definition: cardDefinition
-    //   }
-    //  })
-  }
+  // pushCard(cardWord, cardDefinition){
+  //   console.log(cardWord)
+  //   console.log(cardDefinition)
+  //   let collectionId = this.state.collections[this.state.collectionNumber]._id;
+  //   console.log(collectionId);
+  //   const cardsUrl = 'http://localhost:5000/api/collections/' + collectionId + '/cards';
+  //   // axios({
+  //   //   method: 'post',
+  //   //   url: cardsUrl,
+  //   //   data: {
+  //   //     word: cardWord,
+  //   //     definition: cardDefinition
+  //   //   }
+  // //   })
+  // // }
 
    goToNextCard(){
      let tempCardNumber = this.state.cardNumber;
@@ -86,10 +86,9 @@ class App extends Component {
             currentCollection = {this.state.collectionNumber}
             nextCard={() => this.goToNextCard()} 
             previousCard={() => this.goToPreviousCard()}
-            // handleSubmit={() => this.handleSubmit()}
-            cardWord ={this.state.cardWord}
-            cardDefinition = {this.state.cardDefinition}
-            pushCard = {() => this.pushCard()}
+            // cardWord ={this.state.cardWord}
+            // cardDefinition = {this.state.cardDefinition}
+            // pushCard = {() => this.pushCard()}
           />
         </div>
       )
