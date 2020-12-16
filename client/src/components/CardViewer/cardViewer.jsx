@@ -8,7 +8,9 @@ const CardViewer = (props) => {
     return(
         <div className='row'>
           <div className='bar'>
-              <SideBar collectionNum={props.collectionNumber} collections={props.collections} prevCollection={() => props.prevCollection()} nextCollection={() => props.nextCollection()}/>
+              <SideBar cardWord ={props.cardWord}
+                cardDefinition = {props.cardDefinition}
+                pushCard = {() => props.pushCard()} collectionNum={props.collectionNumber} collections={props.collections} prevCollection={() => props.prevCollection()} nextCollection={() => props.nextCollection()}/>
           </div>
           <div className="main">
             <div className='prev'>

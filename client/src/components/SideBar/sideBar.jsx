@@ -22,7 +22,7 @@ const sideBar = (props) => {
       <div className='add-card'>
         <AddCard 
           collections={props.collections}
-          currentCollection = {props.currentCollection}
+          collectionNum = {props.collectionNum}
           cardWord ={props.cardWord}
           cardDefinition = {props.cardDefinition}
           pushCard = {() => props.pushCard()}

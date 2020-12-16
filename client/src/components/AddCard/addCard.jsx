@@ -30,7 +30,7 @@ import './addCard.css'
     
   
   render() {
-    let collectionTitle = this.props.collections[this.props.currentCollection].title;
+    let collectionTitle = this.props.collections[this.props.collectionNum].title;
 
     return (
       <div>

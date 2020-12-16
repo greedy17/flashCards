@@ -116,6 +116,10 @@ class App extends Component {
           previousCard={() => this.goToPreviousCard()}
           prevCollection={() => this.goToPreviousCollection()}
           nextCollection={() => this.goToNextCollection()}
+          // handleSubmit={() => this.handleSubmit()}
+          cardWord ={this.state.cardWord}
+          cardDefinition = {this.state.cardDefinition}
+          pushCard = {() => this.pushCard()}
           />
         </div>
       )
