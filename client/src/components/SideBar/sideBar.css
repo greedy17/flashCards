@@ -7,27 +7,50 @@
   padding-right: 10;
 }
 
-.row {
-  padding-top: 10em;
-}
 .add-card {
-  padding: 1em;
+  padding-bottom: 1em;
+  padding-top: 2em;
 }
 
 .collections {
-  height: 25vw;
-  overflow-y: scroll;
+  height: 20vw;
+  padding: 1em;
+  overflow: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .categories {
   padding-bottom: 2em;
-  color: #17A2B8;
+  color: darkblue;
 }
 
 .title {
   font-size: 3rem;
   font-weight: 700;
+}
+
+.arrow {
+  border: solid lightblue;
+  border-width: 0 7px 7px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.bottom:hover {
+  cursor: pointer;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }

@@ -9,20 +9,22 @@ const CardViewer = (props) => {
         <div className='row'>
           <div className='bar'>
               <SideBar 
-                collections={props.collections}
+                //cardWord ={props.cardWord}
+                //cardDefinition = {props.cardDefinition}
+                //pushCard = {() => props.pushCard()} 
                 currentCollection = {props.currentCollection}
-                // cardWord ={props.cardWord}
-                // cardDefinition = {props.cardDefinition}
-                // pushCard = {() => props.pushCard()}
-              />
+                collectionNum={props.collectionNumber} 
+                collections={props.collections} 
+                prevCollection={() => props.prevCollection()} 
+                nextCollection={() => props.nextCollection()}/>
           </div>
           <div className="main">
             <div className='prev'>
                 <button className="btn-info btn-lg" onClick={() => props.previousCard()}>Prev</button>
             </div>
             <div className='cardAndcount'>
-                <h4>Click the card to reveal definition!</h4>
-                <Card card={props.card}/>
+                <h4>Click the flashcard to reveal definition!</h4>
+                <Card cards={props.cards} cardNum={props.cardNum}/>
                 <CardCounter cardNum={props.cardNum} cards={props.cards} />
             </div>
             <div className='next'>
