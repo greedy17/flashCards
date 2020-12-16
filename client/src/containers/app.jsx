@@ -14,34 +14,39 @@ class App extends Component {
       cards: [],
       cardNumber: 0,
       loading: true,
-      cardFront:"",
-      cardBack:""
+      // cardWord:"",
+      // cardDefinition:""
     }
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-
+    
   };
 
   componentDidMount() {
     axios.get('http://localhost:5000/api/collections')
     .then(res => {
       const collections = res.data;
+      console.log(collections);
       const cards = res.data[this.state.collectionNumber].cards;
       this.setState({collections});
       this.setState({cards});
       this.setState({ loading: false })
       console.log(collections)
-      console.log(cards)
     })
   }
 
-  handleSubmit(){
-    axios.post('http://localhost:5000/api/collections',{
-      cardFront: "",
-      cardBack:"",
-      collection: ""
-    })
-
+  pushCard(cardWord, cardDefinition){
+    console.log(cardWord)
+    console.log(cardDefinition)
+    let collectionId = this.state.collections[this.state.collectionNumber]._id;
+    console.log(collectionId);
+    const cardsUrl = 'http://localhost:5000/api/collections/' + collectionId + '/cards';
+    // axios({
+    //   method: 'post',
+    //   url: cardsUrl,
+    //   data: {
+    //     word: cardWord,
+    //     definition: cardDefinition
+    //   }
+    //  })
   }
 
    goToNextCard(){
@@ -77,10 +82,14 @@ class App extends Component {
             cardNum = {this.state.cardNumber}
             cards={this.state.cards}
             collections={this.state.collections} 
-            card={this.state.cards[this.state.cardNumber]} 
+            card={this.state.cards[this.state.cardNumber]}
+            currentCollection = {this.state.collectionNumber}
             nextCard={() => this.goToNextCard()} 
             previousCard={() => this.goToPreviousCard()}
-            handleSubmit={() => this.handleSubmit()}
+            // handleSubmit={() => this.handleSubmit()}
+            cardWord ={this.state.cardWord}
+            cardDefinition = {this.state.cardDefinition}
+            pushCard = {() => this.pushCard()}
           />
         </div>
       )

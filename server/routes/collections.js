@@ -30,14 +30,19 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   const { error } = validateCollection(req.body);
   if (error) {
+    console.log(req.body);
+    console.log(error);
     return res.status(400).send(error);
   }
   let collection = new Collection({
     title: req.body.title,
     cards: [],
   });
+  console.log("hello");
   try {
+    console.log(collection);
     const result = await collection.save();
+    console.log(result)
     return res.send(result);
   } catch (error) {
     return res.status(400).send(`Database error: ${error}`);

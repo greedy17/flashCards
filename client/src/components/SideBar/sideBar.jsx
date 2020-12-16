@@ -15,8 +15,11 @@ const sideBar = (props) => {
       </div>
       <div className='add-card'>
         <AddCard 
-          handleSubmit={() => props.handleSubmit()}
           collections={props.collections}
+          currentCollection = {props.currentCollection}
+          cardWord ={props.cardWord}
+          cardDefinition = {props.cardDefinition}
+          pushCard = {() => props.pushCard()}
           />
       </div>
       <div>

@@ -10,7 +10,10 @@ const CardViewer = (props) => {
           <div className='bar'>
               <SideBar 
                 collections={props.collections}
-                handleSubmit={() => props.handleSubmit()}
+                currentCollection = {props.currentCollection}
+                cardWord ={props.cardWord}
+                cardDefinition = {props.cardDefinition}
+                pushCard = {() => props.pushCard()}
               />
           </div>
           <div className="main">
