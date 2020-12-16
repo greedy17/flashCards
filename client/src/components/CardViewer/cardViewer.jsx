@@ -8,7 +8,10 @@ const CardViewer = (props) => {
     return(
         <div className='row'>
           <div className='bar'>
-              <SideBar collections={props.collections}/>
+              <SideBar 
+                collections={props.collections}
+                handleSubmit={() => props.handleSubmit()}
+              />
           </div>
           <div className="main">
             <div className='prev'>

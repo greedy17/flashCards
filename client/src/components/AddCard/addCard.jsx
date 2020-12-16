@@ -6,35 +6,31 @@ import './addCard.css'
       super(props);
       this.state = {
         cardFront: "",
-        cardBack: ""
+        cardBack: "",
+        collection: ""
       };
-
-      this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleChange = this.handleChange.bind(this);
     }
 
-
-    handleSubmit(event) {
-      event.preventDefault();
-      const inputs = event.target.getElementsByTagName('input');
-      console.log(inputs.cardFront.value);
-      console.log(inputs.cardBack.value);
-
+    handleChange(event){
+      const name = event.target.name;
       this.setState({
-        cardFront: inputs.cardFront.value,
-        cardBack: inputs.cardBack.value
-      })      
+        [name]: event.target.value,
+      })
+      console.log(this.state.cardFront, this.state.cardBack)
+
     }
     
   
   render() {
+    {console.log(this.props)}
     return (
       <div>
         <div className="add-card">
           <button className="btn btn-outline-info" data-toggle="modal" data-target="#addCardModal">Add Card</button>
         </div>
   
-        <div className="modal fade" id="addCardModal" tabindex="-1" role="dialog" aria-labelledby="addCardModalTitle" aria-hidden="true">
-        
+        <div className="modal fade" id="addCardModal" tabIndex="-1" role="dialog" aria-labelledby="addCardModalTitle" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -43,19 +39,23 @@ import './addCard.css'
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.props.handleSubmit}>
                 <div className="modal-body">
                   <label>Front: </label>
                   <input 
                     name="cardFront"
-                    class="form-control"  
-                    type="text" >
+                    className="form-control"  
+                    type="text"
+                    onChange={this.handleChange} 
+                  >
                   </input>
                   <label>Back: </label>
                   <input 
                     name="cardBack"
-                    class="form-control"
-                    type="text" >
+                    className="form-control"
+                    type="text"
+                    onChange={this.handleChange} 
+                    >
                   </input>
                 </div>
               <div className="modal-footer">
@@ -69,7 +69,6 @@ import './addCard.css'
       </div>
     );
   }
-  
 }
 
 export default addCard;

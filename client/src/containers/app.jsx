@@ -14,7 +14,12 @@ class App extends Component {
       cards: [],
       cardNumber: 0,
       loading: true,
+      cardFront:"",
+      cardBack:""
     }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+
   };
 
   componentDidMount() {
@@ -25,14 +30,18 @@ class App extends Component {
       this.setState({collections});
       this.setState({cards});
       this.setState({ loading: false })
+      console.log(collections)
+      console.log(cards)
     })
   }
 
-  addNewCard(card){
-    this.state.cards.push(card);
-    this.setState({
-      cardNumber: this.state.cards.length -1
+  handleSubmit(){
+    axios.post('http://localhost:5000/api/collections',{
+      cardFront: "",
+      cardBack:"",
+      collection: ""
     })
+
   }
 
    goToNextCard(){
@@ -65,12 +74,14 @@ class App extends Component {
         <div className="container-fluid app">
           <LandingPage/>
           <CardViewer 
-          cardNum = {this.state.cardNumber}
-          cards={this.state.cards}
-          collections={this.state.collections} 
-          card={this.state.cards[this.state.cardNumber]} 
-          nextCard={() => this.goToNextCard()} 
-          previousCard={() => this.goToPreviousCard()}/>
+            cardNum = {this.state.cardNumber}
+            cards={this.state.cards}
+            collections={this.state.collections} 
+            card={this.state.cards[this.state.cardNumber]} 
+            nextCard={() => this.goToNextCard()} 
+            previousCard={() => this.goToPreviousCard()}
+            handleSubmit={() => this.handleSubmit()}
+          />
         </div>
       )
     }

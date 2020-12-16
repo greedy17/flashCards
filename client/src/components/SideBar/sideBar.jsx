@@ -14,7 +14,10 @@ const sideBar = (props) => {
         <Collections collections={props.collections} collectionNum={props.collectionNum}/>
       </div>
       <div className='add-card'>
-        <AddCard/>
+        <AddCard 
+          handleSubmit={() => props.handleSubmit()}
+          collections={props.collections}
+          />
       </div>
       <div>
         <CreateCollection/>
