@@ -13,7 +13,10 @@ class App extends Component {
       collectionNumber: 0,
       cardNumber: 0,
       loading: true,
+      // cardWord:"",
+      // cardDefinition:""
     }
+    
   };
 
   componentDidMount() {
@@ -27,11 +30,20 @@ class App extends Component {
     })
   }
 
-  addNewCard(card){
-    this.state.cards.push(card);
-    this.setState({
-      cardNumber: this.state.cards.length -1
-    })
+  pushCard(cardWord, cardDefinition){
+    console.log(cardWord)
+    console.log(cardDefinition)
+    let collectionId = this.state.collections[this.state.collectionNumber]._id;
+    console.log(collectionId);
+    const cardsUrl = 'http://localhost:5000/api/collections/' + collectionId + '/cards';
+    // axios({
+    //   method: 'post',
+    //   url: cardsUrl,
+    //   data: {
+    //     word: cardWord,
+    //     definition: cardDefinition
+    //   }
+    //  })
   }
 
    goToNextCard(){

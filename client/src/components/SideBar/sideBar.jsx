@@ -20,13 +20,19 @@ const sideBar = (props) => {
         </div>
       </div>
       <div className='add-card'>
-        <AddCard/>
+        <AddCard 
+          collections={props.collections}
+          currentCollection = {props.currentCollection}
+          cardWord ={props.cardWord}
+          cardDefinition = {props.cardDefinition}
+          pushCard = {() => props.pushCard()}
+          />
       </div>
       <div>
         <CreateCollection/>
       </div>
     </div>
-  )
+  );
 }
 
 export default sideBar;
